@@ -1,0 +1,67 @@
+//NAV!
+.navbar-brand {
+	background-color: $brandBg !important;
+	height: 90px;
+	margin-bottom: -3px;
+	margin-top: -2px;
+	width: 100px;
+	img {
+		//margin-right: 15px;
+		margin-left: 12px;
+		margin-top: 1px;
+		/*display: block;
+		position: relative;
+		margin: 0 auto;
+		left: 0;
+		right: 0;*/
+	}
+}
+
+//TEMP FIX {}
+.navbar-header {
+max-width: 99%; //TEMP FIX {} wasn't here before 100 causes 2 rows, 99 is one row but hamburger is too far from right
+height: 88px;
+	.navbar-toggle {
+		margin-top: 25px;
+	}
+}
+//TEMP FIX {}
+
+.navbar-collapse {
+	max-width: 100%;
+
+	ul {
+		max-width: 100%;
+
+		li {
+			a {
+
+			}
+		}
+	}
+}
+
+.navbar-nav, .navbar {
+	//TEMP FIX
+	//>MOBILE MENU BUG
+	//height: 90px; //TEMP FIX {} removing this displays the submenu
+	//
+	//TEMP FIX {}
+	margin-bottom: -3px;
+	background-color: $navBg;
+	margin-left: -1px;
+
+
+	li {
+		margin-top: -2px;
+		a {
+			border: solid 1px $navFg;
+			height: 90px;
+			font-size: 1.3em;
+			line-height: 60px;
+			color: $navFg;
+			padding-left: 14px;
+			padding-right: 14px;
+		}
+	}
+}

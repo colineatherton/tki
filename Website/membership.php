@@ -1,3 +1,36 @@
+<?php
+
+/* subject and email veriables */
+
+	$emailSubject = 'TKI Membership';
+	$webMaster = 'tenyokaiuk@gmail.com';
+
+/* Gathering Data Variables */
+
+	$name = $_POST ['InputName'];
+	$email = $_POST ['InputEmail'];
+	$location = $_POST ['InputLocation'];
+  $background = $_POST ['InputBackground'];
+
+	$body = <<<EOD
+<br><hr><br>
+A request for membership has been sent from the website.<br>
+The details the user has entered are:<br><hr><br>
+Name: $name <br>
+Email Address: $email <br>
+Location: $location <br>
+Preferred Date of Appointment: $date <br>
+Background: $background <br><hr><br>
+If this email is blank please ignore it <br><hr><br>
+EOD;
+
+	$headers = "From: $email\r\n";
+	$headers .= "Content-type: text/html\r\n";
+	$success = mail($webMaster, $emailSubject, $body, $headers);
+
+/* Results rendered as HTML */
+
+	$theResults = <<<EOD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +41,6 @@
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/tki.css" rel="stylesheet">
-
     <link href='http://fonts.googleapis.com/css?family=Anton|Oswald|Fjalla+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato|Oswald|Roboto+Condensed|Open+Sans|Roboto' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Noto+Sans|Droid+Sans|Lato|Cabin|BenchNine|Josefin+Sans|Oswald|Roboto+Condensed|Open+Sans|Roboto|Open+Sans+Condensed:300|Titillium+Web' rel='stylesheet' type='text/css'>
@@ -42,81 +74,44 @@
             <li><a href="history.html">HISTORY</a></li>
             <li><a href="media.html">MEDIA</a></li>
             <li><a href="articles.html">ARTICLES</a></li>
-            <li class="active"><a href="seminars.html">SEMINARS</a></li>
+            <li><a href="seminars.html">SEMINARS</a></li>
             <li><a href="attire.html">ATTIRE</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li class="active"><a href="contact.html">CONTACT<span class="sr-only">(current)</span></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
     <!-- END OF Nav Bar! //////////////////////////////////-->
-    <div class="clearfix"></div>
+<div class="clearfix"></div>
     <!-- TKI ABOUT! /////////////////////////////////////////////-->
     <div class="container-fluid">
-        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 seminarImage">
+        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 contactImage">
         </div>
         <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 style">
-          <h1>SEMINARS</h1>
-          <h2>LEARN TENJIN SHINYO RYU JUJUTSU
-          <br />AT AN UPCOMING SEMINAR</h2>
-          <p>TAUGHT BY OFFICIAL REPRESENTIVES:
-          <br />PAUL MASTERS SHIHAN, LEE MASTER MENKYO & ANTHONY MASTERS MOKUROKU.</p>
+          <h1>CONTACT</h1>
+          <h2>CONTACT THE TENYOKAI INTERNATIONAL</h2>
+          <p>CONTACT THE TKI BY EMAIL OR FOLLOW US ON SOCIAL MEDIA.</p>
         </div>
     </div>
     <!-- END OF TKI ABOUT! //////////////////////////////////////-->
    
     <!-- menu tiles //////////////////////////////////////-->
     <div class="container-fluid">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 history media-page center">
-        <img class="media-heading-img" src="img/mon.png" height="50px" width="50px"><h1 class="media-heading">UPCOMING</h1>
-        <img class="img-responsive seminars-image" src="img/gasshuku.jpg">
-        <p>Secure your place at the Gasshuku - Pay your £30 non-refundable deposit via paypal now:</p>
-        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
-<input type="hidden" name="cmd" value="_cart">
-<input type="hidden" name="business" value="tenyokaiintl@gmail.com">
-<input type="hidden" name="lc" value="GB">
-<input type="hidden" name="item_name" value="Gasshuku">
-<input type="hidden" name="amount" value="30.00">
-<input type="hidden" name="currency_code" value="GBP">
-<input type="hidden" name="button_subtype" value="products">
-<input type="hidden" name="no_note" value="0">
-<input type="hidden" name="add" value="1">
-<input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest">
-<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-</form>
-
-
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 history media-page">
+        <h2>Thank you for your message - The Tenyokai International will be in touch soon</h2>
+        <img class="media-heading-img" src="img/mon.png" height="50px" width="50px"><h1 class="media-heading">Email</h1>
+        <a href="mailto:info@tenyokai.com"><h2><img src="img/email.png" height="75" width="75">info@tenyokai.com</h2></a>
       </div>
     </div>
-    <!--<div class="container-fluid">
+    <div class="container-fluid">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 history-invert media-page">
-        <img class="media-heading-img" src="img/mon.png" height="50px" width="50px"><h1 class="media-heading">PAST</h1>
-        <h2>NAME OF A SEMINAR
-        <br />xx/xx/xxxx</h2>
-        <p>Description of the seminar Description of the seminar Description of the seminar Description of the seminar Description of the seminar Description of the seminar</p>
-        <span>VIEW PHOTOS 
-        <br />OF THIS SEMINAR</span>
-
-        <h2>NAME OF A SEMINAR
-        <br />xx/xx/xxxx</h2>
-        <p>Description of the seminar Description of the seminar Description of the seminar Description of the seminar Description of the seminar Description of the seminar</p>
-        <span>VIEW MORE 
-        <br />ABOUT THIS SEMINAR</span>
-
-        <h2>NAME OF A SEMINAR
-        <br />xx/xx/xxxx</h2>
-        <p>Description of the seminar Description of the seminar Description of the seminar Description of the seminar Description of the seminar Description of the seminar</p>
-        <span>VIEW FEEDBACK 
-        <br />ON THIS SEMINAR</span>
-
-        <h2>NAME OF A SEMINAR
-        <br />xx/xx/xxxx</h2>
-        <p>Description of the seminar Description of the seminar Description of the seminar Description of the seminar Description of the seminar Description of the seminar</p>
-        <span>VIEW VIDEOS 
-        <br />OF THIS SEMINAR</span>
+        <img class="media-heading-img" src="img/mon.png" height="50px" width="50px"><h1 class="media-heading">Social</h1>
+          <a href="https://twitter.com/tenyokaiintl" target="_blank"><h2><img src="img/twitter.png" height="75" width="75">Twitter</h2></a>
+          <a href="https://www.facebook.com/TenyokaiInternational/?fref=nf" target="_blank"><h2><img src="img/facebook.png" height="75" width="75">Facebook</h2></a>
+          <a href="https://uk.linkedin.com/in/lee-masters-09a10229" target="_blank"><h2><img src="img/linkedin.png" height="75" width="75">Linkedin</h2></a>
+          <a href="https://www.youtube.com/user/LeeMasters/videos" target="_blank"><h2><img src="img/youtube.png" height="75" width="75">YouTube</h2></a>
       </div>
-    </div>-->
+    </div>
     <footer>
       <div class="container-fluid">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -151,3 +146,7 @@
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
+EOD;
+echo "$theResults"
+
+?>

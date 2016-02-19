@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TENYOKAI INTERNATIONAL</title>
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/tki.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/tki.css" rel="stylesheet">
 
     <link href='http://fonts.googleapis.com/css?family=Anton|Oswald|Fjalla+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato|Oswald|Roboto+Condensed|Open+Sans|Roboto' rel='stylesheet' type='text/css'>
@@ -34,19 +33,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img src="img/mon.png" height="60px" width="60px"></a>
+          <a class="navbar-brand" href="../index.html"><img src="../img/mon.png" height="60px" width="60px"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">HOME<span class="sr-only">(current)</span></a></li>
-            <li><a href="history.html">HISTORY</a></li>
-            <li><a href="media.html">MEDIA</a></li>
-            <li><a href="articles.html">ARTICLES</a></li>
-            <li><a href="seminars.html">SEMINARS</a></li>
-            <li class="active"><a href="attire.html">ATTIRE</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="../index.html">HOME<span class="sr-only">(current)</span></a></li>
+            <li><a href="../history.html">HISTORY</a></li>
+            <li><a href="../media.html">MEDIA</a></li>
+            <li><a href="../articles.html">ARTICLES</a></li>
+            <li><a href="../seminars.html">SEMINARS</a></li>
+            <li class="active"><a href="../attire.html">ATTIRE</a></li>
+            <li><a href="../contact.html">CONTACT</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -55,35 +54,37 @@
     <div class="clearfix"></div>
     <!-- TKI ABOUT! /////////////////////////////////////////////-->
     <div class="container-fluid">
-        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 attireImage">
+        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 itemImage">
+          <img src="../img/grey-tee.png" class="img-responsive item-image">
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 style">
-          <h1>ATTIRE</h1>
-          <h2>SUPPORT TENYOKAI INTERNATIONAL.</h2>
-          <p>OFFICIAL TENYOKAI INTERNATIONAL TENJIN SHINYO RYU JUJUTSU CLOTHING.</p>
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 itemDescription">
+          <h1>TKI MON T-SHIRT</h1>
+          <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+            <input type="hidden" name="cmd" value="_cart">
+            <input type="hidden" name="business" value="tenyokaiintl@gmail.com">
+            <input type="hidden" name="lc" value="US">
+            <input type="hidden" name="item_name" value="Grey TKI Illustrated T-Shirt">
+            <input type="hidden" name="amount" value="20.00">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="hidden" name="button_subtype" value="products">
+            <input type="hidden" name="no_note" value="0">
+            <input type="hidden" name="add" value="1">
+            <input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest">
+            <table>
+            <tr><td><input type="hidden" name="on0" value="Sizes"><h2>Sizes</h2></td></tr><tr><td><select name="os0">
+              <option value="Small">Small </option>
+              <option value="Medium">Medium </option>
+              <option value="Large">Large </option>
+            </select> </td></tr>
+            </table>
+            <h2>Price - £20.00</h2>
+            <p>There may be an additonal postage and packaging charge outside of Europe.</p>
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
         </div>
     </div>
     <!-- END OF TKI ABOUT! //////////////////////////////////////-->
-    <div class="container-fluid">
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 history">
-        <div class="col-xs-12 media-page item-page">
-          <a href="products/mon_red.html"><img src="img/red-tee.png" class="img-responsive item-image"></a>
-            <h2>TKI RED MON T-SHIRT
-            <br />£20.00</h2>
-            <p>This T-shirt bears the official mark of Tenjin Shinyo Ryu Jujutsu.</p>
-            <a href="products/mon_red.html"><span>VIEW DETAILS</span></a>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 history">
-        <div class="col-xs-12 media-page item-page-invert">
-          <a href="products/grey_tee.html"><img src="img/grey-tee.png" class="img-responsive item-image"></a>
-            <h2>TKI GREY T-SHIRT
-            <br />£20.00</h2>
-            <p>Tenyokai International Tenjin Shinyo Ryu Jujutsu illustrated T-shirt.</p>
-            <a href="products/grey_tee.html"><span>VIEW DETAILS</span></a>
-        </div>
-      </div>
-    </div>
     <footer>
       <div class="container-fluid">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -115,13 +116,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/paypal-button.min.js"></script>
-      <script type="text/javascript" charset="utf-8">
-    $(document).ready(function(){
-    $("a[rel^='prettyPhoto']").prettyPhoto();
-    });
-  </script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/paypal-button.min.js"></script>
   </body>
 </html>
